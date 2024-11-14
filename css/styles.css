@@ -175,7 +175,9 @@ align-items: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-.hero-button:hover, .hero-button:focus {background-color: #404bbf;}
+.hero-button:hover, .hero-button:focus {
+    background-color: #404bbf;
+}
 /* #endregion */
 
 /* #region Features Section */
@@ -191,11 +193,25 @@ align-items: center;
 .features-item {
     width: calc((100% - 3 * 24px) / 4);}
 
+.features-icon-box {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    position: relative;
+    margin-bottom: 8px;
+}
+
 .features-icon {
+    position: absolute;
     display: inline-block;
     width: 64px;
     height: 64px;
-    background-color: #f4f4fd;}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* #endregion */
 
 /* #region Team Section */
@@ -230,10 +246,7 @@ align-items: center;
     border-radius: 50%;
 }
 
-.social-icon {
-    width: 16px;
-    height: 16px;
-}
+
 /* #endregion */
 
 /* #region Portfolio Section */
