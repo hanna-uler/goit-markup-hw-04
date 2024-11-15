@@ -114,8 +114,17 @@ align-items: center;
     padding: 24px 0;
     transition-property: color;
 }
+.nav-link::after {
+    display: block;
+    content: "";
+    background-color: transparent;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+}
 
 .nav-link:hover, .nav-link:focus {color: #404bbf;}
+.nav-link:hover::after {background-color: #404bbf;}
 
 .address {font-style: normal;}
 .address-list {display: flex;
