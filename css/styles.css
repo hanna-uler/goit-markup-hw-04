@@ -71,13 +71,24 @@ height: auto;}
 .socials-item {
     width: 40px;
     height: 40px;
+    
+    position: relative;
+    
+}
+
+.socials-link {
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
+    fill: #f4f4fd;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,6 +100,10 @@ height: auto;}
 /* #region Header Section */
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 
+      0px 2px 1px rgba(46, 47, 66, 0.08), 
+      0px 1px 1px rgba(46, 47, 66, 0.16), 
+      0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -135,6 +150,10 @@ align-items: center;
     padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.nav-link:first-child {
+    color: #404bbf;
+}
 .nav-link::after {
     position: absolute;
     display: block;
@@ -169,6 +188,7 @@ padding: 24px 0;}
 
 /* #region Hero Section */
 .hero-section {
+    max-width: 1440px;
     background-color: #2e2f42;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,6 +253,9 @@ max-width: 1440px;
     width: calc((100% - 3 * 24px) / 4);}
 
 .features-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
@@ -269,7 +292,7 @@ max-width: 1440px;
 }
 
 .team-card-descr {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .team-name,
@@ -285,7 +308,8 @@ max-width: 1440px;
     justify-content: center;
 }
 
-.socials-item:hover, .socials-item:focus {
+
+.socials-link:hover, ..socials-link:focus {
     background-color: #404bbf;
 }
 /* #endregion */
@@ -314,7 +338,7 @@ max-width: 1440px;
     height: 100%;
     padding: 40px 32px;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-item-overlay {
@@ -346,6 +370,7 @@ width: calc((100% - 48px) / 3);
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-left-box {
@@ -372,7 +397,7 @@ width: calc((100% - 48px) / 3);
 .footer-socials-list {
     gap: 16px;
 }
-.footer .socials-item:hover, .footer .socials-item:focus {
+.footer .socials-link:hover, .footer .socials-link:focus {
     background-color: #31d0aa;
 }
  
